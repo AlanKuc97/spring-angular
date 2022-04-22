@@ -1,0 +1,21 @@
+$base-top-margin: 20px;
+$base-border-radius: 5px;
+#customers{
+    background-color: #ffffff;
+    width: 80%;
+    margin: $base-top-margin auto;
+    border-radius: $base-border-radius;
+    min-height: 500px;
+    padding: 10px;
+    #filter{
+        display: flex;
+        justify-content: space-between;
+        #searchField{
+            min-width: 30%;
+        }
+    }
+    tr:hover{
+        background-color: #efefef;
+        cursor: pointer;
+    }
+}

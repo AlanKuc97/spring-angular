@@ -1,0 +1,19 @@
+.pair{
+    margin-top: 10px;  
+}
+.pair ::ng-deep input{
+    display: block;
+    margin-top: 5px;
+    min-width: 250px;
+}
+.pair-first{
+    margin-top: 0px;
+}
+#calendar{
+    display: block;
+}
+#buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}

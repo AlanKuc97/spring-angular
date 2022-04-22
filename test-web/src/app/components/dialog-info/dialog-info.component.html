@@ -1,0 +1,28 @@
+<p-dialog header="{{this.headerText}}" [(visible)]="display" (onHide)="cancel()">
+    <form [formGroup]="form">
+        <div class="pair pair-first">
+            <label for="name">Name</label>
+            <input id="name" type="text" formControlName="name" pInputText [readonly]="!this.isAddDialog"/>
+        </div>
+        <div class="pair">
+            <label for="name">Surname</label>
+            <input id="name" type="text" formControlName="surname" pInputText [readonly]="!this.isAddDialog"/>
+        </div>
+        <div class="pair">
+            <label for="name">Birth date</label>
+            <p-calendar id="calendar" appendTo="body" 
+            formControlName="birthDate" [disabled]="!this.isAddDialog"></p-calendar>
+        </div>
+        <div class="pair">
+            <label for="name">Telephone number</label>
+            <input id="name" type="text" formControlName="telNumber" pInputText [readonly]="!this.isAddDialog"/>
+        </div>
+        <div class="pair">
+            <label for="name">E-mail</label>
+            <input id="name" type="text" formControlName="email" pInputText [readonly]="!this.isAddDialog"/>
+        </div>
+    </form>
+    <div *ngIf="this.isAddDialog" id="buttons" >
+        <button pButton type="button" label="Save" (click)="this.saveCustomer()"></button>
+    </div>
+</p-dialog>
